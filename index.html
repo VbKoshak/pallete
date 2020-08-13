@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <header class="flex-row">
+        <div class="rect flex tool-control"><i class="fas fa-bars"></i></div>
+        <div class="title flex"><span>CodeJam - Pallete</span></div>
+        <div class="rect flex side-control"><i class="fas fa-ellipsis-v"></i></div>
+    </header>
+    <main class="flex-row">
+        <aside class="tools flex-column">
+            <div class="tool-box" id="tool">
+                <div class="tool-line flex-row checked" id="pencil">
+                    <div class="rect"><i class="fas fa-pencil-alt"></i></div>
+                    <span class="tool-name">Pencil</span>
+                </div>
+                <div class="tool-line flex-row" id="bucket">
+                    <div class="rect"><i class="fas fa-fill-drip"></i></div>
+                    <span class="tool-name">Paint bucket</span>
+                </div>
+                <div class="tool-line flex-row" id="colorPicker">
+                    <div class="rect"><i class="fas fa-eye-dropper"></i></div>
+                    <span class="tool-name">Pick color</span>
+                </div>
+                <hr>
+                <div class="tool-line flex-row" id="save">
+                    <div class="rect"><i class="fas fa-save"></i></div>
+                    <span class="tool-name">save</span>
+                </div>
+            </div>
+            <div class="tool-box" id="color">
+                <div class="tool-line flex-row checked">
+                    <input type="color" name="current" id="current" class="rect color" value="#00FF00">
+                    <span class="tool-name">Current color</span>
+                </div>
+                <div class="tool-line flex-row">
+                    <input type="color" name="prev" id="current" class="rect color" value="#000000">
+                    <span class="tool-name">Prev color</span>
+                </div>
+                <hr>
+                <div class="tool-line flex-row">
+                    <input type="color" name="st1" id="current" class="rect color" value="#0000FF">
+                    <span class="tool-name">static color #1</span>
+                </div>
+                <div class="tool-line flex-row">
+                    <input type="color" name="st2" id="current" class="rect color" value="#FFFF00" >
+                    <span class="tool-name">static color #2</span>
+                </div>
+            </div>
+        </aside>
+        <div class="main-field flex">
+            <canvas id="drawField"></canvas>
+        </div>
+        <div class="options-bar side">
+            <div class="tool-box" id="size">
+                <div class="tool-line flex-row static">
+                    <div class="rect"><i class="fas fa-paint-brush"></i></i></div>
+                    <span class="tool-name">Pixels</span>
+                </div>
+                <hr>
+                <div class="tool-line flex-row" id="size4" data-num="4">
+                    <div class="rect"><i class="far fa-square"></i></div>
+                    <span class="tool-name">4x4</span>
+                </div>
+                <div class="tool-line flex-row" id="size32" data-num="32">
+                    <div class="rect"><i class="far fa-square"></i></div>
+                    <span class="tool-name">32x32</span>
+                </div>
+            </div>
+        </div>
+        <div class="options-bar side hidden">
+            <div class="tool-box" id="photoSize">
+                <div class="tool-line flex-row static">
+                    <div class="rect"><i class="fas fa-image"></i></div>
+                    <span class="tool-name">Photos</span>
+                </div>
+                <hr>
+                <div class="tool-line flex-row static">
+                    <div class="rect"><i class="fas fa-search"></i></div>
+                    <span class="tool-name flex-row"><div id="searcher">Find</div><input type="text" id="city" placeholder="Minsk"></span>
+                </div>
+                <div class="tool-line flex-row static">
+                    <div class="rect"><i class="fas fa-sync-alt"></i></i></div>
+                    <span class="tool-name" id="gray">GrayScale it!</span>
+                </div>
+                <hr>
+                <div class="tool-line flex-row" id="size64" data-num="64" data-photo="true">
+                    <div class="rect"><i class="far fa-square"></i></div>
+                    <span class="tool-name">64x64</span>
+                </div>
+                <div class="tool-line flex-row" id="size128" data-num="128" data-photo="true">
+                    <div class="rect"><i class="far fa-square"></i></div>
+                    <span class="tool-name">128x128</span>
+                </div>
+                <div class="tool-line flex-row" id="size256" data-num="256" data-photo="true">
+                    <div class="rect"><i class="far fa-square"></i></div>
+                    <span class="tool-name">256x256</span>
+                </div>
+                <div class="tool-line flex-row" id="size512" data-num="512" data-photo="true">
+                    <div class="rect"><i class="far fa-square"></i></div>
+                    <span class="tool-name">512x512</span>
+                </div>
+            </div>
+        </div>
+        <div class="notify-box">
+            <div class="notify-text flex" id="notifyText"></div>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/de740ea9e1.js" crossorigin="anonymous"></script>
+    <script src="./dist/main.js
+    "></script>
+</body>
+
+</html>
